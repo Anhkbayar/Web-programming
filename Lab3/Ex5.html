@@ -2,33 +2,55 @@
 <html>
 
 <head>
+    <style>
+        div {
+            margin: 3px;
+        }
+
+        .grid {
+            display: grid;
+        }
+    </style>
     <title>Даалгавар 5</title>
 </head>
 
-<body>
+<body style="background-color: #1877F2;">
     <h3>Personal information</h3>
     <form>
-        <label for="fname">Firstname:</label>
-        <input type="text" id="fname"><br>
-        <label for="lname">Lastname:</label>
-        <input type="text" id="lname"><br>
-        <label for="date">Date</label>
-        <input type="text" id="date" value="mm/dd/yyyy"><br>
-        <label for="">Gender</label>
-        <input type="radio" id="male" value="Male">
-        <label for="male">Male</label>
-        <input type="radio" id="female" value="Female">
-        <label for="female">Female</label><br>
-        <label for="jobs">Jobs:</label>
-        <select id="jobs">
-            <option value="teacher">Teacher</option>
-            <option value="student">Student</option>
-            <option value="engineer">Engineer</option>
-            <option value="mechanic">Mechanic</option>
-        </select><br>
-        <input type="submit" value="submit"><br>
-        <input type="reset" value="reset"
+        <div class="grid">
+            <div>
+                <label for="fname">Firstname:</label>
+                <input type="text" id="fname" required>
+            </div>
+            <div>
+                <label for="lname">Lastname: </label>
+                <input type="text" id="lname" required>
+            </div>
+            <div>
+                <label for="date">Date:</label>
+                <input type="date" id="date">
+            </div>
+            <div>
+                <label for="gender">Gender:</label>
 
+                <input type="radio" id="er" name="gender" value="male" checked>
+                <label for="er">Male</label>
+
+                <input type="radio" id="em" name="gender" value="Female">
+                <label for="em">Female</label>
+            </div>
+            <div>
+                <label for="jobs">Jobs:</label>
+                <select id="jobs">
+                    <option value="teacher">Teacher</option>
+                    <option value="student">Student</option>
+                    <option value="engineer">Engineer</option>
+                    <option value="mechanic">Mechanic</option>
+                </select>
+            </div>
+        </div>
+        <input type="submit"><br>
+        <input type="reset" 
     </form>
 </body>
 
