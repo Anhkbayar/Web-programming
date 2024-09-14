@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Даалгавар 3</title>
+    <style>
+        .main-container {
+            display: flex;
+            width: 100%;
+            height: 85vh;
+        }
+        .left-column {
+            display: flex;
+            flex-direction: column;
+            
+            width: 20%;
+        }
+        .right-column {
+            width: 80%;
+            height: 100%;
+        }
+        .header{
+            width: 100%;
+            height: 15vh;
+        }
+        iframe {
+            width: 100%;
+            border: none; 
+        }
+    </style>
+</head>
+<body>
+
+    <iframe class="header" src="ex3/hdrfrm.html"></iframe>
+
+    <div class="main-container">
+        <div class="left-column">
+            <iframe class="packagefrm" src="ex3/packagefrm.html"></iframe>
+            <iframe class="listfrm" src="ex3/listfrm.html"></iframe>
+        </div>
+        <div class="right-column">
+            <iframe class="detailfrm" src="ex3/dtlfrm.html"></iframe>
+        </div>
+    </div>
+
+</body>
+</html>
