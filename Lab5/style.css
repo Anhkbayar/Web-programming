@@ -1,6 +1,6 @@
 body {
     background-color: #ffffcc;
-    font: Verdana;
+    font-family: "Verdana";
     color: #663300;
 }
 
@@ -16,12 +16,16 @@ body {
     border-top: 2px solid #000000;
     background-color: #ccaa66;
     text-align: center;
+    margin: 0;
+}
+#container2{
+    display: flex;
 }
 
 #leftcolumn {
-    float: left;
     padding-top: 10px;
     background-color: #E8D882;
+    min-width: 150px;
 }
 
 .navBar {
@@ -33,7 +37,6 @@ body {
 #rightcolumn {
     background-color: #f1e8b0;
     padding: 10px;
-    margin-left: 150px;
 }
 
 .floatright {
@@ -57,7 +60,6 @@ body {
 }
 
 H1 {
-    background-color: #663300;
     padding-top: 10px;
     padding-bottom: 10px;
 
