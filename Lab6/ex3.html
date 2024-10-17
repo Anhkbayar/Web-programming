@@ -1,0 +1,89 @@
+<html>
+
+</html>
+
+<head>
+    <title>Positioning Lab</title>
+    <style type="text/css">
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background-color: #ECECEC;
+            font-weight: bold;
+            font-family: Tahoma, Geneva,
+                sans-serif;
+            color: #FFF;
+            text-align: center;
+            line-height: 24px;
+        }
+
+        #wrapper {
+            position: relative;
+            background-color: #FFF;
+            border: 1px solid black;
+            width: 800px;
+            height: 200px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .box {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+        }
+
+        #red {
+            background-color: #900;
+            top: 0;
+            left: 0;
+        }
+
+        #green {
+            background-color: #090;
+            top: 0;
+            right: 0;
+        }
+
+        #blue {
+            background-color: #00F;
+            left: 0;
+            bottom: 0;
+        }
+
+        #purple {
+            background-color: #63C;
+            right: 0;
+            bottom: 0;
+        }
+
+        #footer {
+            background-color: #666;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+
+        h1 {
+            color: #000;
+            font-weight: normal;
+            padding: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Absolute 1</h1>
+    <div id="wrapper">
+        <div id="footer" class="box">Footer</div>
+    </div>
+    <div id="red" class="box">Red</div>
+    <div id="green" class="box">Green</div>
+    <div id="blue" class="box">Blue</div>
+    <div id="purple" class="box">Purple</div>
+</body>
+
+</html>
