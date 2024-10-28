@@ -18,9 +18,12 @@ prev.addEventListener("click", () => {
     update();
 });
 function update() {
-    circles.forEach((circles, index))=> {
-        
-    }
+    circles.forEach((circle, index) => {
+        if (index < currentActive) {
+            circle.classList.add("active");
+        } else {
+            circle.classList.remove("active");
+        }
     });
     const actives = document.querySelectorAll(".active");
     progress.style.width =
