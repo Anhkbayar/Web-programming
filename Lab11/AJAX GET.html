@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <title>Оюутны мэдээлэл</title>
+    <script>
+        function loadStudentData() {
+            const xhr = new XMLHttpRequest();
+            xhr.open("GET", "students.json", true);
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    const students = JSON.parse(xhr.responseText);
+                    let tableContent = "<tr><th>Овог</th><th>Нэр</th><th>Код</th><th>Нас</th><th>Төрсөн огноо</th><th>Голч дүн</th><th>Чөлөө авсан эсэх</th></tr>";
+                    students.forEach(student => {
+                        tableContent += `<tr>
+                            <td>${student.lastName}</td>
+                            <td>${student.firstName}</td>
+                            <td>${student.studentCode}</td>
+                            <td>${student.age}</td>
+                            <td>${student.birthDate}</td>
+                            <td>${student.gpa}</td>
+                            <td>${student.leaveTaken ? "Тийм" : "Үгүй"}</td>
+                        </tr>`;
+                    });
+                    document.getElementById("studentTable").innerHTML = tableContent;
+                }
+            };
+
+            xhr.send();
+        }
+    </script>
+</head>
+<body>
+    <button onclick="loadStudentData()">Оюутны мэдээлэл авах</button>
+    <table id="studentTable" border="1"></table>
+</body>
+</html>

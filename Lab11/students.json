@@ -1,0 +1,29 @@
+[
+    {
+        "lastName": "Батсайхан",
+        "firstName": "Тэмүүлэн",
+        "studentCode": "20231123",
+        "age": 21,
+        "birthDate": "2003-05-15",
+        "gpa": 3.5,
+        "leaveTaken": false
+    },
+    {
+        "lastName": "Гантулга",
+        "firstName": "Бат",
+        "studentCode": "20231124",
+        "age": 22,
+        "birthDate": "2002-04-10",
+        "gpa": 3.8,
+        "leaveTaken": true
+    },
+    {
+        "lastName": "Сайнбаяр",
+        "firstName": "Дорж",
+        "studentCode": "20231125",
+        "age": 23,
+        "birthDate": "2001-07-12",
+        "gpa": 3.6,
+        "leaveTaken": false
+    }
+]
