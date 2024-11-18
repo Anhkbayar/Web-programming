@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html lang="mn">
-
 <head>
     <meta charset="UTF-8">
     <title>Асинхрон POST хүсэлт</title>
     <script>
-
         function sendPostData() {
             const xhr = new XMLHttpRequest();
-            xhr.open("POST", "AJAX POST.HTML", true);
+            xhr.open("POST", "your-server-url", true);
             xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-            
+
             const data = JSON.stringify({
-                name: "Тэмүүлэн",
-                age: 21
+                name: "Ankhbayar",
+                age: 19
             });
 
             xhr.onreadystatechange = function () {
@@ -26,9 +24,7 @@
         }
     </script>
 </head>
-
 <body>
     <button onclick="sendPostData()">Өгөгдөл илгээх</button>
 </body>
-
 </html>

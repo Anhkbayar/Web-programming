@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: #c49c6e; /* Background similar to your uploaded image */
+    color: #000; /* Black text */
+    overflow: hidden;
+}
+
+.text-container {
+    position: relative;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.sliding-text-container {
+    display: inline-block;
+    height: 1em; /* Match text height */
+    overflow: hidden;
+    vertical-align: bottom;
+    position: relative;
+}
+
+.sliding-text {
+    display: inline-block;
+    color: #00bfa6; /* Green color for the changing text */
+    animation: slideUp 6s ease infinite;
+    white-space: nowrap;
+}
+
+@keyframes slideUp {
+    0%, 33% {
+        transform: translateY(0); /* Start with "clean" */
+    }
+    34%, 66% {
+        transform: translateY(-100%); /* Slide to "problem free" */
+    }
+    67%, 100% {
+        transform: translateY(-200%); /* Slide to "clever" */
+    }
+}

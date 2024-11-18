@@ -5,12 +5,12 @@
     <title>Оюутны мэдээлэл</title>
     <script>
         function loadStudentData() {
-            const xhr = new XMLHttpRequest();
-            xhr.open("GET", "students.json", true);
+            const bla = new XMLHttpRequest();
+            bla.open("GET", "students.json", true);
 
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    const students = JSON.parse(xhr.responseText);
+            bla.onreadystatechange = function () {
+                if (bla.readyState === 4 && bla.status === 200) {
+                    const students = JSON.parse(bla.responseText);
                     let tableContent = "<tr><th>Овог</th><th>Нэр</th><th>Код</th><th>Нас</th><th>Төрсөн огноо</th><th>Голч дүн</th><th>Чөлөө авсан эсэх</th></tr>";
                     students.forEach(student => {
                         tableContent += `<tr>
@@ -27,7 +27,7 @@
                 }
             };
 
-            xhr.send();
+            bla.send();
         }
     </script>
 </head>

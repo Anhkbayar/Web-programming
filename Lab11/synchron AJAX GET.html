@@ -1,39 +1,27 @@
 <!DOCTYPE html>
 <html lang="mn">
-
 <head>
     <meta charset="UTF-8">
     <title>Синхрон GET хүсэлт</title>
     <script>
         function getSyncData() {
             const xhr = new XMLHttpRequest();
-            xhr.open("GET", "students.json", false);
+            const name = "Ankhbayar";
+            const age = 19;
+
+            xhr.open("GET", `data?name=${encodeURIComponent(name)}&age=${encodeURIComponent(age)}`, false);
+            
             xhr.send();
 
             if (xhr.status === 200) {
-                const students = JSON.parse(xhr.responseText);
-                students.forEach(student => {
-                    content +=
-                        `<div>
-                            <h3>${student.lastName}</h3>
-                            <p>${student.firstName}</p>
-                            <p>${student.studentCode}</p>
-                            <p>${student.age}</p>
-                            <p>${student.birthDate}</p>
-                            <p>${student.gpa}</p>
-                            <p>${student.leaveTaken ? "Тийм" : "Үгүй"}</p>
-                 </div>`;
-                })
-                document.getElementById('#ners').innerHTML = content;
-            };
-
-        };
+                alert("Өгөгдөл: " + xhr.responseText);
+            } else {
+                alert("Алдаа гарлаа: " + xhr.status);
+            }
+        }
     </script>
 </head>
-
 <body>
     <button onclick="getSyncData()">Синхрон өгөгдөл авах</button>
-    <div id="ners"></div>
 </body>
-
 </html>
