@@ -6,7 +6,7 @@
     <script>
         function sendPostData() {
             const xhr = new XMLHttpRequest();
-            xhr.open("POST", "your-server-url", true);
+            xhr.open("POST", "http://127.0.0.1:5500/students.json", true);
             xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
 
             const data = JSON.stringify({
